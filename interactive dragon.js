@@ -3,6 +3,14 @@
 const screen = document.getElementById("screen");
 const xmlns = "http://www.w3.org/2000/svg";
 const xlinkns = "http://www.w3.org/1999/xlink";
+const devtools = { open: false };
+const element = new Image();
+Object.defineProperty(element, 'id', {
+    get: function () {
+        devtools.open = true;
+    }
+});
+console.log(element);
 
 window.addEventListener(
 	"pointermove",
